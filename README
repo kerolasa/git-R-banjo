@@ -1,0 +1,58 @@
+This is git-R-banjo statistic image helper script set.
+
+First run
+---------
+
+Run scripts in directory where you have git repository. Normal
+first session will look something like.
+
+cd my-git-repo
+~/src/git-R-banjo/git-get-stats.sh
+R
+> source('~/src/git-R-banjo/create-images.R')
+
+
+Other common cases
+------------------
+
+The script which gathers statistics takes all sorts of arguments
+which `git log' and `git shortlog' will accept.  Author assumes some
+may be interested of changes in between two tags
+
+~/src/git-R-banjo/git-get-stats.sh v2.19..v2.20
+
+Limiting investigation to some parts of git tree is also possible.
+
+~/src/git-R-banjo/git-get-stats.sh v3.0..v3.1 include/net net
+
+Requirements
+------------
+
+You need the following software.
+
+	awk
+	bash
+	R
+	sed
+
+And some R packages.
+
+	gplots
+	lattice
+
+If you have never used the packages above execute R manually, and
+
+> install.packages('lattice')
+...
+
+Other
+-----
+
+As a smart person you already figured it out, this 'package' is it's
+infancy. Without doubt many interesting things could be made to
+graphs. Feel free to submit patches, improvement proposals etc
+feedback.
+
+If you wonder the name of this stuff take a look of a video clip.
+
+http://www.youtube.com/watch?v=Uzae_SqbmDE
