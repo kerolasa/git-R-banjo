@@ -46,3 +46,9 @@ levelplot(t(apply(t(hourlyMatrix), 2, rev)),
 readline(prompt = "Pause. Press <Enter> to continue...")
 barplot(table(format(strptime(tags$date, "%a %b %d %H:%M:%S %Y %z"), "%Y")),
 	main="tags per year")
+
+
+# added/removed lines in commits
+readline(prompt = "Pause. Press <Enter> to continue...")
+boxplot(dateLines$insertions, dateLines$deletions,
+outline=F, main="number of lines in commits\nadded / removed", ylab="lines")
