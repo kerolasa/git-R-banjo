@@ -40,3 +40,9 @@ levelplot(t(apply(t(hourlyMatrix), 2, rev)),
 	col.regions=colorpanel(19, "white", "black"),
 	ylab='weekday', xlab='hour',
 	main="commits during week")
+
+
+# Tags per year
+readline(prompt = "Pause. Press <Enter> to continue...")
+barplot(table(format(strptime(tags$date, "%a %b %d %H:%M:%S %Y %z"), "%Y")),
+	main="tags per year")
